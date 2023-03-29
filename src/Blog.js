@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./styles/blog.css";
+import "./styles/Blog.css";
 
 function DateString(date) {
     const dateObject = new Date(date);
