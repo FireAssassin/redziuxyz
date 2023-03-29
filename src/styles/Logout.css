@@ -1,0 +1,22 @@
+main.Logout {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 20px 10px 20px;
+    margin: 13svh 0 0 0;
+    background-color: #121212c5;
+    font-size: 20px;
+    backdrop-filter: blur(10px);
+}
+
+main.Logout > input,
+main.Logout > div > input {
+    font-size: 20px;
+    border: none;
+    background-color: #30270ec5;
+    padding: 10px;
+    color: #ffffff;
+}
+
+main.Logout > div > input:last-child {
+    float: right;
+}

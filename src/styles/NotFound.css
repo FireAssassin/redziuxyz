@@ -1,0 +1,14 @@
+main.NotFound {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 20px 10px 20px;
+    margin: 13svh 0 0 0;
+    background-color: #121212c5;
+    font-size: 20px;
+}
+
+main.NotFound > a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}

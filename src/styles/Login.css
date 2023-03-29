@@ -1,0 +1,73 @@
+main.Login {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 70%;
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+    padding: 10px 20px 10px 20px;
+    background-color: #121212c5;
+    font-size: 20px;
+    backdrop-filter: blur(10px);
+}
+
+main.Login > div {
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+}
+
+main.Login > div > div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: fit-content;
+    margin: 10px;
+}
+
+main.Login > div > div > form > label > p {
+    font-size: 13px;
+} 
+
+main.Login > div > div > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: baseline;
+}
+
+main.Login > div > div > form > label {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+
+main.Login > div > div > form * {
+    font-size: 20px;
+    border: none;
+}
+
+main.Login > div > div > form input {
+    background-color: #30270ec5;
+    padding: 5px;
+    color: #ffffff;
+}
+
+main.Login > input {
+    background-color: #30270ec5;
+    padding: 5px;
+    color: #ffffff;
+    font-size: 20px;
+    border: none;
+}
+
+main.Login > a {
+    color: #c79c10;
+    font-size: 20px;
+    text-decoration: none;
+}

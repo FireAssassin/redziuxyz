@@ -1,0 +1,46 @@
+main.Main {
+    justify-self: center;
+    max-width: 70%;
+    max-height: 100%;
+    width: fit-content;
+    height: fit-content;
+    margin: var(--menu-height) 0 0 0;
+    padding: 10px;
+    background-color: #121212c5;
+    font-size: 20px;
+    color: #ffffff;
+    backdrop-filter: blur(10px);
+}
+
+main.Main::before {
+    content: "Moje projekty";
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0px 0px 20px 0px;
+}
+
+main.Main > div.projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+main.Main > div.projects > p {
+    width: 300px;
+    background-color: #851b1bc0;
+    margin: 10px;
+    overflow: hidden;
+    font-size: 20px;
+}
+
+main.Main > div.projects > p > a > img {
+    width: 100%;
+    aspect-ratio: 1.9;
+}
+
+main.Main > div.projects > p > a {
+    color: #b90000;
+    text-decoration: none;
+}

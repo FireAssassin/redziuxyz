@@ -1,0 +1,28 @@
+main.Blog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: var(--menu-height) 0 0 0;
+    width: 80%;
+}
+
+main.Blog > div.post {
+    width: 80%;
+    margin: 0px 0px 20px 0px;
+    padding: 10px 20px 10px 20px;
+    background-color: #121212c5;
+    backdrop-filter: blur(10px);
+    font-size: 20px;
+}
+
+main.Blog > div.post > div.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+main.Blog > div.post > p > p.author {
+    margin: 20px 0 0 0;
+    text-align: right;
+}

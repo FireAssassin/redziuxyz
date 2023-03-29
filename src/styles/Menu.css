@@ -1,0 +1,45 @@
+div#Menu {
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #851b1b;
+    overflow: hidden;
+    z-index: 100;
+}
+
+div#Menu > a {
+    height: 100%;
+    background-color: #851b1b;
+    padding: 20px 15px 20px 15px;
+    margin: 0;
+    transition: 0.2s;
+    user-select: none;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+div#Menu > a:hover {
+    background-color: #121212;
+}
+
+div#Menu > a.toright {
+    padding: 20px 15px 20px 15px;
+    margin-left: auto;
+}
+
+div#Menu > a.toright > a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+div#Menu > a > ul {
+    display: none;
+    position: relative;
+    background-color: #851b1b;
+    list-style: none;
+    transition: 0.2s;
+    padding: 0;
+}

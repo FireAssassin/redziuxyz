@@ -1,0 +1,27 @@
+{
+    "remotePath": "./files/redziuxyz/",
+    "host": "192.168.1.107",
+    "username": "redziu",
+    "password": "polpol111",
+    "port": 21,
+    "secure": false,
+    "protocol": "ftp",
+    "uploadOnSave": true,
+    "passive": false,
+    "debug": false,
+    "privateKeyPath": null,
+    "passphrase": null,
+    "agent": null,
+    "allow": [],
+    "ignore": [
+        ".vscode/",
+        ".DS_Store/",
+        "node_modules/"
+    ],
+    "generatedFiles": {
+        "extensionsToInclude": [
+            ""
+        ],
+        "path": ""
+    }
+}
