@@ -6,18 +6,14 @@ async function login() {
 
     await fetch(`https://api.redziu.xyz/user/auth`, {
         method: "POST",
-        body: JSON.stringify({ user: username, password: password }),
+        body: JSON.stringify({ username: username, password: password }),
     })
         .then((response) => response.json())
         .then((data) => {
             if (data.message !== "Zalogowano") {
-                document
-                    .querySelector(".loginerror").innerHTML = data.message;
+                document.querySelector(".loginerror").innerHTML = data.message;
             } else {
-                localStorage.setItem(
-                    "login",
-                    JSON.stringify(data.token)
-                );
+                localStorage.setItem("login", JSON.stringify(data.token));
                 window.location.replace("/");
             }
         });
@@ -27,14 +23,24 @@ async function register() {
     let username = document.getElementsByClassName("UsernameREG")[0].value;
     let password = document.getElementsByClassName("PasswordREG")[0].value;
 
+    let headersList = {
+        "Accept": "*/*",
+        "Content-Type": "application/json",
+    };
+
+    let bodyContent = JSON.stringify({
+        username: username,
+        password: password,
+    });
+
     await fetch(`https://api.redziu.xyz/user/`, {
         method: "PUT",
-        body: JSON.stringify({ user: username, password: password }),
+        body: bodyContent,
+        headers: headersList,
     })
         .then((response) => response.json())
         .then((data) => {
-            document
-                .querySelector(".registererror").innerHTML = data.message;
+            document.querySelector(".registererror").innerHTML = data.message;
         });
 }
 
