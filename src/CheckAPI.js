@@ -5,7 +5,7 @@ function CheckAPI() {
 
     useEffect(() => {
         async function fetchData() {
-            fetch("https://api.redziu.xyz/status", { method: "GET", cache: "no-cache" })
+            fetch("https://api.redziu.xyz/", { method: "GET", cache: "no-cache" })
                 .then(data =>
                     setData(data.status === 200 ? "Online" : "Offline")
                 );
