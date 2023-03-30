@@ -7,10 +7,10 @@ function Menu() {
 
     useEffect(() => {
         if (localStorage.getItem("login")) {
-            let username = JSON.parse(localStorage.getItem("login")).user;
-            let password = JSON.parse(localStorage.getItem("login")).password;
-            fetch(`https://api.redziu.xyz/user/${username}/${password}/true`, {
-                method: "GET",
+            let data = JSON.parse(localStorage.getItem("login")).data;
+            fetch(`https://api.redziu.xyz/user/auth`, {
+                method: "POST",
+                body: JSON.stringify({data: data}),
             })
                 .then((response) => {
                     if (response.ok) return response.json();

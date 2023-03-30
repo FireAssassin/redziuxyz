@@ -4,8 +4,9 @@ async function login() {
     let username = document.getElementsByClassName("UsernameLOG")[0].value;
     let password = document.getElementsByClassName("PasswordLOG")[0].value;
 
-    await fetch(`https://api.redziu.xyz/user/${username}/${password}/false`, {
-        method: "GET",
+    await fetch(`https://api.redziu.xyz/user/auth`, {
+        method: "POST",
+        body: JSON.stringify({ user: username, password: password }),
     })
         .then((response) => response.json())
         .then((data) => {
@@ -19,7 +20,7 @@ async function login() {
             } else {
                 localStorage.setItem(
                     "login",
-                    JSON.stringify({ user: data.user, password: data.password })
+                    JSON.stringify(data.token)
                 );
                 window.location.replace("/");
             }
@@ -30,8 +31,9 @@ async function register() {
     let username = document.getElementsByClassName("UsernameREG")[0].value;
     let password = document.getElementsByClassName("PasswordREG")[0].value;
 
-    await fetch(`https://api.redziu.xyz/user/${username}/${password}`, {
-        method: "POST",
+    await fetch(`https://api.redziu.xyz/user/`, {
+        method: "PUT",
+        body: JSON.stringify({ user: username, password: password }),
     })
         .then((response) => response.json())
         .then((data) => {
