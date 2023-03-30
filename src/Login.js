@@ -12,11 +12,7 @@ async function login() {
         .then((data) => {
             if (data.message !== "Zalogowano") {
                 document
-                    .querySelector("div.login")
-                    .insertAdjacentHTML(
-                        "beforeend",
-                        `<p class="error">${data.message}</p>`
-                    );
+                    .querySelector(".loginerror").innerHTML = data.message;
             } else {
                 localStorage.setItem(
                     "login",
@@ -38,11 +34,7 @@ async function register() {
         .then((response) => response.json())
         .then((data) => {
             document
-                .querySelector("div.register")
-                .insertAdjacentHTML(
-                    "beforeend",
-                    `<p class="error">${data.message}</p>`
-                );
+                .querySelector(".registererror").innerHTML = data.message;
         });
 }
 
@@ -75,6 +67,7 @@ function Login() {
                             value="Zaloguj"
                         />
                     </form>
+                    <p className="loginerror"></p>
                 </div>
                 <div className="register">
                     <h1>Zarejestruj się</h1>
@@ -106,6 +99,7 @@ function Login() {
                             value="Zarejestruj"
                         />
                     </form>
+                    <p className="registererror"></p>
                 </div>
             </div>
             {/* <input onClick={() => window.location.replace("/")} value="Strona główna"/> */}
