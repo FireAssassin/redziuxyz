@@ -38,7 +38,7 @@ async function register() {
         method: "PUT",
         body: bodyContent,
         headers: headersList,
-        mode: "cors",
+        mode: "same-origin",
     })
         .then((response) => response.json())
         .then((data) => {
