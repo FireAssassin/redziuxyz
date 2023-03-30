@@ -25,6 +25,7 @@ async function register() {
 
     let headersList = {
         "Accept": "*/*",
+        "Access-Control-Allow-Origin": "*",
         "Content-Type": "application/json",
     };
 
