@@ -58,6 +58,16 @@ main.Login > div > div > form input {
     color: #ffffff;
 }
 
+main.Login > div > div > form > input {
+    transition: 0.2s;
+}
+
+main.Login > div > div > form > input:active {
+    background-color: #7a711ac5;
+    padding: 5px;
+    color: #ffffff;
+}
+
 main.Login > input {
     background-color: #30270ec5;
     padding: 5px;
