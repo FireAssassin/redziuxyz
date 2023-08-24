@@ -10,7 +10,7 @@ function Contact() {
             </p>
             <p>
                 Discord:&nbsp;
-                <a>grok#0113</a>
+                <a>therealxxfirexx</a>
             </p>
             <p>
                 <a href="https://github.com/FireAssassin/">GitHub</a>
