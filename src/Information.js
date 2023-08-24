@@ -14,7 +14,6 @@ function Information() {
                     <p className="author">
                         Wersja strony <span className="bold">3.1.0</span>
                         <br />
-                        grok#0113.
                     </p>
                 </p>
             </div>
